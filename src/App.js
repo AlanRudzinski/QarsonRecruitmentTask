@@ -1,13 +1,12 @@
-import './App.css';
-import CarTable from './components/CarTable/CarTable.component';
+import './App.scss'
+import CarTable from './components/CarTable/CarTable.component'
 
-
-function App() {
+function App () {
   return (
-    <div className="App">
-      <CarTable/>
+    <div className='App'>
+      <CarTable />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

@@ -1,11 +1,18 @@
 table {
     margin: 0 auto;
-    width: 91%;
-    border: 1px solid red;
     border-collapse: separate;
     border-spacing: 0;
+    width: 1200px;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,.3);
 }
 
 thead{
     color: #fff;
+    font-size: 1.2rem;
 }
+
+th, td {
+    padding: 16px 35px;
+}
+
+

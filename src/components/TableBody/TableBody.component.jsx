@@ -1,27 +1,21 @@
-import React from 'react';
+import React from 'react'
 
-import PropTypes from 'prop-types';
+import ContentRow from '../ContentRow/ContentRow.component'
 
-import './TableBody.styles.scss';
+import PropTypes from 'prop-types'
+
+import './TableBody.styles.scss'
 
 const TableBody = ({ data }) => (
-    <tbody>
-        {console.log(data)}
-        {data.map(({ engine, model, make, availability }, idx) => (
-            <tr key={idx}>
-                {}
-                <td>{`${make} ${model} ${engine}`}</td>
-                <td>{model}</td>
-                <td>{engine}</td>
-                <td>{availability ? 'Tak' : 'Nie'}</td>
-                <td>[buttons]</td>
-            </tr>
-        ))}
-    </tbody>
+  <tbody>
+    {data.map((rowData, idx) => (
+      <ContentRow rowData={rowData} idx={idx} />
+    ))}
+  </tbody>
 )
 
-TableBody.propTypes ={
-    data: PropTypes.array
+TableBody.propTypes = {
+  data: PropTypes.array
 }
 
-export default TableBody;
+export default TableBody

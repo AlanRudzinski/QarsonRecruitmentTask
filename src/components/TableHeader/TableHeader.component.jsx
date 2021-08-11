@@ -1,19 +1,19 @@
-import React from 'react';
+import React from 'react'
 
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 
-import './TableHeader.styles.scss';
+import './TableHeader.styles.scss'
 
 const TableHeader = ({ headers }) => (
-    <thead>
-        <tr>
-            {headers.map((header, idx) => <th key={idx}>{header}</th>)}
-        </tr>
-    </thead>
+  <thead>
+    <tr>
+      {headers.map((header, idx) => <th key={idx}>{header}</th>)}
+    </tr>
+  </thead>
 )
 
-TableHeader.propTypes ={
-    headers: PropTypes.array
+TableHeader.propTypes = {
+  headers: PropTypes.array
 }
 
-export default TableHeader;
+export default TableHeader
