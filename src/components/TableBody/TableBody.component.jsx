@@ -4,40 +4,24 @@ import PropTypes from 'prop-types';
 
 import './TableBody.styles.scss';
 
-const TableBody = () => (
+const TableBody = ({ data }) => (
     <tbody>
-        <tr>
-            <td>Volkswagen</td>
-            <td>Golf IV</td>
-            <td>1.6TDI</td>
-            <td>Tak</td>
-            <td>dupa</td>
-        </tr>
-        <tr>
-            <td>Volkswagen</td>
-            <td>Golf IV</td>
-            <td>1.6TDI</td>
-            <td>Tak</td>
-            <td>dupa</td>
-        </tr>        <tr>
-            <td>Volkswagen</td>
-            <td>Golf IV</td>
-            <td>1.6TDI</td>
-            <td>Tak</td>
-            <td>dupa</td>
-        </tr>
-        <tr>
-            <td>Volkswagen</td>
-            <td>Golf IV</td>
-            <td>1.6TDI</td>
-            <td>Tak</td>
-            <td>dupa</td>
-        </tr>
+        {console.log(data)}
+        {data.map(({ engine, model, make, availability }, idx) => (
+            <tr key={idx}>
+                {}
+                <td>{`${make} ${model} ${engine}`}</td>
+                <td>{model}</td>
+                <td>{engine}</td>
+                <td>{availability ? 'Tak' : 'Nie'}</td>
+                <td>[buttons]</td>
+            </tr>
+        ))}
     </tbody>
 )
 
-// TableHeader.propTypes ={
-//     headers: PropTypes.array
-// }
+TableBody.propTypes ={
+    data: PropTypes.array
+}
 
 export default TableBody;
