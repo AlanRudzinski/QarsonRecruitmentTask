@@ -7,8 +7,6 @@ import { getAllTableCars } from '../../utils/fetchCarData'
 
 import './CarTable.styles.scss'
 
-
-
 const CarTable = () => {
   const [tableData, setTableData] = useState([])
 
@@ -19,14 +17,14 @@ const CarTable = () => {
   }, [])
 
   return (
-    <div className="round-border">
+    <div className='round-border'>
       <table>
         <colgroup>
-          <col span="1" />
-          <col span="1" />
-          <col span="1" />
-          <col span="1" />
-          <col span="1" />
+          <col span='1' />
+          <col span='1' />
+          <col span='1' />
+          <col span='1' />
+          <col span='1' />
         </colgroup>
         <TableHeader />
         <TableBody data={tableData} />

@@ -2,8 +2,6 @@ import React from 'react'
 
 import { HEADERS } from './../../utils/constans'
 
-
-
 import './TableHeader.styles.scss'
 
 const TableHeader = () => (

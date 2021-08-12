@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
-import Modal from 'react-modal';
-import ModalButton from '../ModalButton';
+import Modal from 'react-modal'
+import ModalButton from '../ModalButton'
 
 import './RemoveButton.styles.scss'
 
@@ -12,9 +12,9 @@ const customStyles = {
     right: 'auto',
     bottom: 'auto',
     marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
-  },
-};
+    transform: 'translate(-50%, -50%)'
+  }
+}
 
 const RemoveButton = () => {
   const [isModalVisible, setIsModalVisible] = useState(false)
@@ -40,18 +40,18 @@ const RemoveButton = () => {
 
   return (
     <>
-      <button className="remove-button" onClick={showModal}><i className="far fa-trash-alt"></i></button>
-        <Modal
-          isOpen={isModalVisible}
-          onRequestClose={handleCancel}
-          style={customStyles}
-          >
-          <p>Czy na pewno chcesz usunąć wiersz?</p>
-          <div className="button-container">
-            <ModalButton warning={true} handleClick={handleOk}>Tak</ModalButton>
-            <ModalButton handleClick={handleCancel}>Nie</ModalButton>
-          </div>
-        </Modal>      
+      <button className='remove-button' onClick={showModal}><i className='far fa-trash-alt' /></button>
+      <Modal
+        isOpen={isModalVisible}
+        onRequestClose={handleCancel}
+        style={customStyles}
+      >
+        <p>Czy na pewno chcesz usunąć wiersz?</p>
+        <div className='button-container'>
+          <ModalButton warning handleClick={handleOk}>Tak</ModalButton>
+          <ModalButton handleClick={handleCancel}>Nie</ModalButton>
+        </div>
+      </Modal>
     </>
   )
 }

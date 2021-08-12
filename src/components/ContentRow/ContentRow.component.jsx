@@ -1,15 +1,13 @@
 import React, { useState } from 'react'
 
 import PropTypes from 'prop-types'
-import Modal from 'react-modal';
+import Modal from 'react-modal'
 
 import ChangeAvailabilityButton from '../ChangeAvailabilityButton'
 import RemoveButton from '../RemoveButton'
-import ModalButton from '../ModalButton';
-
+import ModalButton from '../ModalButton'
 
 import './ContentRow.styles.scss'
-
 
 const customStyles = {
   content: {
@@ -21,8 +19,8 @@ const customStyles = {
     transform: 'translate(-50%, -50%)',
     display: 'flex',
     flexDirection: 'column'
-  },
-};
+  }
+}
 
 const ContentRow = ({ rowData }) => {
   const { make, model, engine, availability, photo } = rowData
@@ -45,32 +43,33 @@ const ContentRow = ({ rowData }) => {
     <tr className={available ? '' : 'highlightRed'}>
       <td>
         <span>{`${make} ${model} ${engine}`}</span>
-        {photo ? <div onClick={openModal}  className="img-container" >
-          <img className="thumbnail" src={photo} alt={`${model} car`}/>
-          <i className="far fa-eye"></i>
-        </div>
-        : ''}
+        {photo
+          ?
+          <div onClick={openModal} className='img-container'>
+            <img className='thumbnail' src={photo} alt={`${model} car`} />
+            <i className='far fa-eye' />
+          </div>
+          : ''}
 
-      <Modal
-        style={customStyles}
-        isOpen={isModalVisible}
-        onRequestClose={closeModal}
-      >
-        <img className="modal-image" src={photo} alt={`${model} car`} />
-        <ModalButton handleClick={closeModal} warning={true}>Close</ModalButton>
-      </Modal>
+        <Modal
+          style={customStyles}
+          isOpen={isModalVisible}
+          onRequestClose={closeModal}
+        >
+          <img className='modal-image' src={photo} alt={`${model} car`} />
+          <ModalButton handleClick={closeModal} warning>Close</ModalButton>
+        </Modal>
       </td>
       <td>{model}</td>
       <td>{engine}</td>
       <td>{available ? 'Tak' : 'Nie'}</td>
       <td><RemoveButton /><ChangeAvailabilityButton available={available} handleClick={changeAvailability} /></td>
-   </tr>
+    </tr>
   )
 }
 
 ContentRow.propTypes = {
   rowData: PropTypes.shape({}).isRequired
 }
-
 
 export default ContentRow
