@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import ChangeAvailabilityButton from '../ChangeAvailabilityButton/ChangeAvailabilityButton.component'
 import RemoveButton from '../RemoveButton/RemoveButton.component'
+import PropTypes from 'prop-types'
 
 import { Image } from 'antd'
 
@@ -30,5 +31,10 @@ const ContentRow = ({ rowData }) => {
     </tr>
   )
 }
+
+ContentRow.propTypes = {
+  rowData: PropTypes.shape({}).isRequired
+}
+
 
 export default ContentRow

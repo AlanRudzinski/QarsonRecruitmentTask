@@ -1,9 +1,7 @@
 table {
-    margin: 0 auto;
     border-collapse: separate;
     border-spacing: 0;
-    width: 1200px;
-    box-shadow: 0 0 20px 0 rgba(0,0,0,.3);
+    width: 100%;
 }
 
 thead{
@@ -15,4 +13,10 @@ th, td {
     padding: 16px 35px;
 }
 
-
+.round-border {
+    border-radius: 10px;
+    overflow: hidden;
+    width: 90vw;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,.3);
+    margin: 20px auto;
+}

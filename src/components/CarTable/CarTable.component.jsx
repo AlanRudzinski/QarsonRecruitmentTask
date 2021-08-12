@@ -7,9 +7,11 @@ import { getAllTableCars } from '../../utils/fetchCarData'
 
 import './CarTable.styles.scss'
 
+const headers = ['Nazwa', 'Model', 'Silnik', 'Dostepnosc', 'Akcja']
+
+
 const CarTable = () => {
   const [tableData, setTableData] = useState([])
-  const headers = ['Nazwa', 'Model', 'Silnik', 'Dostepnosc', 'Akcja']
 
   useEffect(() => {
     getAllTableCars()
@@ -18,10 +20,12 @@ const CarTable = () => {
   }, [])
 
   return (
-    <table>
-      <TableHeader headers={headers} />
-      <TableBody data={tableData} />
-    </table>
+    <div className="round-border">
+      <table>
+        <TableHeader headers={headers} />
+        <TableBody data={tableData} />
+      </table>
+    </div>
   )
 }
 

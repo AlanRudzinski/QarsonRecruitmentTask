@@ -13,7 +13,7 @@ const TableHeader = ({ headers }) => (
 )
 
 TableHeader.propTypes = {
-  headers: PropTypes.array
+  headers: PropTypes.arrayOf(String).isRequired
 }
 
 export default TableHeader

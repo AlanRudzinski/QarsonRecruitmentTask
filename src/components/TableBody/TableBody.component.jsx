@@ -15,7 +15,7 @@ const TableBody = ({ data }) => (
 )
 
 TableBody.propTypes = {
-  data: PropTypes.array
+  data: PropTypes.arrayOf(Object).isRequired
 }
 
 export default TableBody
