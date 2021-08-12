@@ -1,3 +1,5 @@
+@import '../../theme';
+
 .remove-button {
     width: 40px;
     height: 32px;
@@ -9,7 +11,7 @@
     &:hover {
         i {
             transition: color .5s ease-in-out;
-            color: red;
+            color: $primary-danger;
             animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
             transform: rotate(0);
             backface-visibility: hidden;

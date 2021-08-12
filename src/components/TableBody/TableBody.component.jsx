@@ -1,6 +1,6 @@
 import React from 'react'
 
-import ContentRow from '../ContentRow/ContentRow.component'
+import ContentRow from '../ContentRow'
 
 import PropTypes from 'prop-types'
 

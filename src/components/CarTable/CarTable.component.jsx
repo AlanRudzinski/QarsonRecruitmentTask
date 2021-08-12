@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react'
 
-import TableHeader from '../TableHeader/TableHeader.component'
-import TableBody from '../TableBody/TableBody.component'
+import TableHeader from '../TableHeader'
+import TableBody from '../TableBody'
 
 import { getAllTableCars } from '../../utils/fetchCarData'
 
 import './CarTable.styles.scss'
 
-const headers = ['Nazwa', 'Model', 'Silnik', 'Dostepnosc', 'Akcja']
 
 
 const CarTable = () => {
@@ -29,7 +28,7 @@ const CarTable = () => {
           <col span="1" />
           <col span="1" />
         </colgroup>
-        <TableHeader headers={headers} />
+        <TableHeader />
         <TableBody data={tableData} />
       </table>
     </div>

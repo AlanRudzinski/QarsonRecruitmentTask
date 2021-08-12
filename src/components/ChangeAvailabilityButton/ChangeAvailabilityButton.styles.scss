@@ -1,26 +1,24 @@
+@import '../../theme';
+
 button {
     background-color: transparent;
     border: none;
     cursor: pointer;
-
 }
 
 .fa-toggle-on {
-    color: #43a047;
-
+    color: $highlight-available;
 }
 
 .fas {
     position: absolute;
     top: calc(50% - 0.75rem);
     font-size: 1.5rem;
-
 }
 
 .toggle {
     opacity: 0;
-    transition: opacity .1s ease-in-out;
-
+    transition: opacity .3s ease-in-out;
 }
 
 .show-icon {

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import Modal from 'react-modal';
-import ModalButton from '../ModalButton/ModalButton.component';
+import ModalButton from '../ModalButton';
 
 import './RemoveButton.styles.scss'
 
@@ -44,13 +44,12 @@ const RemoveButton = () => {
         <Modal
           isOpen={isModalVisible}
           onRequestClose={handleCancel}
-          contentLabel="dupa"
           style={customStyles}
           >
           <p>Czy na pewno chcesz usunąć wiersz?</p>
           <div className="button-container">
             <ModalButton warning={true} handleClick={handleOk}>Tak</ModalButton>
-            <ModalButton handleClick={handleCancel} >Nie</ModalButton>
+            <ModalButton handleClick={handleCancel}>Nie</ModalButton>
           </div>
         </Modal>      
     </>

@@ -1,5 +1,9 @@
+@import '../../theme';
+
 thead {
-    background-color: #7858e3;
+    background-color: $primary-color;
     text-align: left;
     height: 60px;
+    color: $header-text;
+    font-size: 1.2rem;
 }

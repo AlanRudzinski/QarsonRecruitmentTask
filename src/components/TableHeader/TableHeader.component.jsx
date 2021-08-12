@@ -1,19 +1,17 @@
 import React from 'react'
 
-import PropTypes from 'prop-types'
+import { HEADERS } from './../../utils/constans'
+
+
 
 import './TableHeader.styles.scss'
 
-const TableHeader = ({ headers }) => (
+const TableHeader = () => (
   <thead>
     <tr>
-      {headers.map((header, idx) => <th key={idx}>{header}</th>)}
+      {HEADERS.map((header, idx) => <th key={idx}>{header}</th>)}
     </tr>
   </thead>
 )
-
-TableHeader.propTypes = {
-  headers: PropTypes.arrayOf(String).isRequired
-}
 
 export default TableHeader

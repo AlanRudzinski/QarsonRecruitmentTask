@@ -7,12 +7,12 @@ const ChangeAvailabilityButton = ({ handleClick, available }) => (
   <button onClick={handleClick}>
     <i className={`fas fa-toggle-on toggle ${available ? 'show-icon' : ''}`}></i>
     <i className={`fas fa-toggle-off toggle ${available ? '' : 'show-icon'}`}></i>
-
   </button>
 )
 
 ChangeAvailabilityButton.propTypes = {
-  handleClick: PropTypes.func
+  handleClick: PropTypes.func,
+  available: PropTypes.bool
 }
 
 

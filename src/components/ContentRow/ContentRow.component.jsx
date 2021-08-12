@@ -1,16 +1,14 @@
 import React, { useState } from 'react'
 
+import PropTypes from 'prop-types'
 import Modal from 'react-modal';
 
-import ChangeAvailabilityButton from '../ChangeAvailabilityButton/ChangeAvailabilityButton.component'
-import RemoveButton from '../RemoveButton/RemoveButton.component'
-
-
-import PropTypes from 'prop-types'
+import ChangeAvailabilityButton from '../ChangeAvailabilityButton'
+import RemoveButton from '../RemoveButton'
+import ModalButton from '../ModalButton';
 
 
 import './ContentRow.styles.scss'
-import ModalButton from '../ModalButton/ModalButton.component';
 
 
 const customStyles = {
@@ -47,7 +45,7 @@ const ContentRow = ({ rowData }) => {
     <tr className={available ? '' : 'highlightRed'}>
       <td>
         <span>{`${make} ${model} ${engine}`}</span>
-        {photo ? <div  onClick={openModal}  className="img-container" >
+        {photo ? <div onClick={openModal}  className="img-container" >
           <img className="thumbnail" src={photo} alt={`${model} car`}/>
           <i className="far fa-eye"></i>
         </div>
