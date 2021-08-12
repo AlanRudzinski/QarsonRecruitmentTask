@@ -9,7 +9,7 @@ import './TableBody.styles.scss'
 const TableBody = ({ data }) => (
   <tbody>
     {data.map((rowData, idx) => (
-      <ContentRow rowData={rowData} idx={idx} />
+      <ContentRow rowData={rowData} key={idx} />
     ))}
   </tbody>
 )
