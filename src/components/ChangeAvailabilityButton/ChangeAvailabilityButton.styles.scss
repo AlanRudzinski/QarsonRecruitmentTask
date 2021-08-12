@@ -1,5 +1,29 @@
 button {
-    width: '150px';
-    background-color: '#7858e3';
-    border-color: '#7858e3';
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
 }
+
+.fa-toggle-on {
+    color: #43a047;
+
+}
+
+.fas {
+    position: absolute;
+    top: calc(50% - 0.75rem);
+    font-size: 1.5rem;
+
+}
+
+.toggle {
+    opacity: 0;
+    transition: opacity .1s ease-in-out;
+
+}
+
+.show-icon {
+    opacity: 1;
+}
+

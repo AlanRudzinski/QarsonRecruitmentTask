@@ -1,0 +1,17 @@
+.modal-button {
+    min-width: 70px;
+    margin: 10px;
+    height: 30px;
+    border: 1px lightblue solid;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    &:hover {
+        background-color: lightblue;
+    }
+}
+
+.warning {
+    border: 1px lightcoral solid;
+    &:hover {
+        background-color: lightcoral;
+    }
+}

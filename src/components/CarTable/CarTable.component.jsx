@@ -22,6 +22,13 @@ const CarTable = () => {
   return (
     <div className="round-border">
       <table>
+        <colgroup>
+          <col span="1" />
+          <col span="1" />
+          <col span="1" />
+          <col span="1" />
+          <col span="1" />
+        </colgroup>
         <TableHeader headers={headers} />
         <TableBody data={tableData} />
       </table>

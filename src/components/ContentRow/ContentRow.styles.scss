@@ -1,5 +1,5 @@
 .highlightRed {
-    background-color: rgb(255, 175, 175);
+    background-color: rgb(255, 175, 175) !important;
 }
 
 tr {
@@ -7,10 +7,43 @@ tr {
     position: relative;
     & td:first-child {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        span {
-            margin-bottom: 10px;
-        }
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
+
+}
+.thumbnail {
+    max-width:100%;
+    max-height:100%;
+
+}
+
+.fa-eye {
+    position: absolute;
+    left: calc(50% - .7rem);
+    top: calc(50% - .7rem);
+    z-index: 1001;
+    font-size: 1.4rem;
+    display: none;
+
+}
+
+.img-container {
+    width: 75px;
+    cursor: pointer;
+    position: relative;
+    &:hover .thumbnail {
+        opacity: 0.3;
+    }
+
+    &:hover .fa-eye {
+        display: block;
+    }
+
+
+}
+
+.modal-image {
+    width: 600px;
 }

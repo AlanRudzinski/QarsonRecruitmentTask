@@ -1,22 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 
-import { Button } from 'antd'
-
 import './ChangeAvailabilityButton.styles.scss'
 
-const ChangeAvailabilityButton = ({ handleClick }) => (
-  <Button
-    onClick={handleClick}
-    type= "primary"
-    style={{
-      width: '150px',
-      backgroundColor: '#7858e3',
-      borderColor: '#7858e3'
-    }}
-  >
-    Zmień dostępność
-  </Button>
+const ChangeAvailabilityButton = ({ handleClick, available }) => (
+  <button onClick={handleClick}>
+    <i className={`fas fa-toggle-on toggle ${available ? 'show-icon' : ''}`}></i>
+    <i className={`fas fa-toggle-off toggle ${available ? '' : 'show-icon'}`}></i>
+
+  </button>
 )
 
 ChangeAvailabilityButton.propTypes = {

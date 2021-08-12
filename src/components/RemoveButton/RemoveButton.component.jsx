@@ -1,8 +1,20 @@
 import React, { useState } from 'react'
 
-import { Modal, Button } from 'antd'
+import Modal from 'react-modal';
+import ModalButton from '../ModalButton/ModalButton.component';
 
 import './RemoveButton.styles.scss'
+
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+  },
+};
 
 const RemoveButton = () => {
   const [isModalVisible, setIsModalVisible] = useState(false)
@@ -28,18 +40,19 @@ const RemoveButton = () => {
 
   return (
     <>
-      <Button type='danger' style={{ width: '150px' }} onClick={showModal}>Usuń</Button>
-      <Modal
-        title='Usuń wiersz'
-        visible={isModalVisible}
-        onOk={handleOk}
-        onCancel={handleCancel}
-        okType='danger'
-        okText='Tak'
-        cancelText='Nie'
-      >
-        <p>Czy na pewno chcesz usunąć wiersz?</p>
-      </Modal>
+      <button className="remove-button" onClick={showModal}><i className="far fa-trash-alt"></i></button>
+        <Modal
+          isOpen={isModalVisible}
+          onRequestClose={handleCancel}
+          contentLabel="dupa"
+          style={customStyles}
+          >
+          <p>Czy na pewno chcesz usunąć wiersz?</p>
+          <div className="button-container">
+            <ModalButton warning={true} handleClick={handleOk}>Tak</ModalButton>
+            <ModalButton handleClick={handleCancel} >Nie</ModalButton>
+          </div>
+        </Modal>      
     </>
   )
 }

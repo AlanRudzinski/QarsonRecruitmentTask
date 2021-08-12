@@ -2,21 +2,46 @@ table {
     border-collapse: separate;
     border-spacing: 0;
     width: 100%;
+    col:nth-child(1) {
+        width: 33%;
+    }
+    col:nth-child(2) {
+        width: 13%;
+    }
+    col:nth-child(3) {
+        width: 22%;
+    }
+    col:nth-child(4) {
+        width: 19%;
+    }
+    col:nth-child(5) {
+        width: 13%;
+    }
 }
 
 thead{
     color: #fff;
     font-size: 1.2rem;
 }
-
 th, td {
-    padding: 16px 35px;
+    padding-right: 70px;
 }
+
+td:first-child, th:first-child{
+    padding-left: 40px;
+    
+}
+
+td {
+    height: 50px;
+}
+
 
 .round-border {
     border-radius: 10px;
     overflow: hidden;
     width: 90vw;
     box-shadow: 0 0 20px 0 rgba(0,0,0,.3);
-    margin: 20px auto;
+    margin: 10px auto 0 auto;
 }
+

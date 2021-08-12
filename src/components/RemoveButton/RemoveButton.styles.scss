@@ -1,3 +1,48 @@
-button {
-    margin-bottom: 10px;
+.remove-button {
+    width: 40px;
+    height: 32px;
+    border: none;
+    cursor: pointer;
+    background-color: none;
+    padding: 0;
+    
+    &:hover {
+        i {
+            transition: color .5s ease-in-out;
+            color: red;
+            animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+            transform: rotate(0);
+            backface-visibility: hidden;
+            perspective: 1000px;
+        }
+    }
+}
+
+i {
+    font-size: 1.5rem;
+}
+
+.button-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+
+
+
+@keyframes shake {
+    10%, 90% {
+        transform: rotate(-2deg);
+      }
+      20%, 80% {
+        transform: rotate(4deg);
+      }
+      30%, 50%, 70% {
+        transform: rotate(-8deg);
+      }
+      40%, 60% {
+        transform: rotate(8deg);
+
+      }
 }
