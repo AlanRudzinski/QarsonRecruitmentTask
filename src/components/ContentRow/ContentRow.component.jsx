@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import ChangeAvailabilityButton from '../ChangeAvailabilityButton/ChangeAvailabilityButton.component'
+import RemoveButton from '../RemoveButton/RemoveButton.component'
 
 import { Image } from 'antd'
 
-import RemoveButton from '../RemoveButton/RemoveButton.component'
+
 
 
 import './ContentRow.styles.scss'

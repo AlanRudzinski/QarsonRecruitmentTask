@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react'
+import React, { useState } from 'react'
 
 import { Modal, Button } from 'antd'
 
@@ -10,11 +10,7 @@ const RemoveButton = () => {
 
   const showModal = (e) => {
     setIsModalVisible(true)
-    let row = e.target
-    while (row.tagName !== 'TR') {
-      row = row.parentElement
-    }
-    setRowToRemove(row)
+    setRowToRemove(e.target.closest('tr'))
   }
 
   const handleOk = () => {
